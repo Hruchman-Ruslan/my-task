@@ -1,14 +1,18 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const TitleStyle = styled.h2`
   color: #fafafa;
-  font-feature-settings: "liga" off;
+  font-feature-settings: 'liga' off;
   font-family: Manrope;
-  font-size: 40px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
-  line-height: 44px;
-  letter-spacing: -0.8px;
+  line-height: 32px; /* 114.286% */
+  letter-spacing: -0.56px;
 
-  margin-bottom: 28px;
+  @media screen and (min-width: 768px) {
+    font-size: 40px;
+    line-height: 44px; /* 110% */
+    letter-spacing: -0.8px;
+  }
 `;
