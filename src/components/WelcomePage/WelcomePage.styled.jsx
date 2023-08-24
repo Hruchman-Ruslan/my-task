@@ -1,8 +1,13 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const WelcomeContainer = styled.div`
+  display: inline-block;
   text-align: center;
-  width: 400px;
+  max-width: 350px;
+
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
 `;
 
 export const WelcomeText = styled.p`
@@ -34,6 +39,8 @@ export const ButtonRegistrationText = styled.p`
   font-style: normal;
   font-weight: 600;
   line-height: 18px; /* 128.571% */
+
+  margin: 0;
 `;
 
 export const ButtonLogin = styled.button`
@@ -54,10 +61,16 @@ export const ButtonLoginText = styled.p`
   font-style: normal;
   font-weight: 600;
   line-height: 18px; /* 128.571% */
+
+  margin: 0;
 `;
 
 export const ButtonContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 14px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
 `;
