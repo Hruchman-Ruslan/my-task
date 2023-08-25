@@ -1,17 +1,18 @@
-// import { LoginForm } from "./components/Login/Login";
-// import { RegistrationForm } from "./components/Registration/Registration";
-import { WelcomePage } from 'components/WelcomePage/WelcomePage';
+import { RegistrationForm } from 'components/Registration/Registration';
+// import { WelcomePage } from 'components/WelcomePage/WelcomePage';
 import { Container } from 'styles/Container.styled';
-import { Section } from 'styles/Section.styled';
+import { SectionRegistration, SectionWelcome } from 'styles/Section.styled';
 
 function App() {
   return (
     <Container>
-      <Section>
+      {/* <SectionWelcome>
         <WelcomePage />
-        {/* <RegistrationForm />
-      <LoginForm /> */}
-      </Section>
+      </SectionWelcome> */}
+      <SectionRegistration>
+        <RegistrationForm />
+      </SectionRegistration>
+      {/* <LoginForm /> */}
     </Container>
   );
 }

@@ -1,17 +1,18 @@
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { Title } from "../Title/Title";
-import { Button } from "../Button/Button";
-import { Link } from "../Link/Link";
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+import { Title } from '../Title/Title';
+import { Button } from '../Button/Button';
+import { Link } from '../Link/Link';
+import { RegistrationContainer } from './Registration.styled';
 
 const schema = yup.object().shape({
-  name: yup.string().required("Full Name is required"),
-  email: yup.string().email("Invalid email").required("Email is required"),
+  name: yup.string().required('Full Name is required'),
+  email: yup.string().email('Invalid email').required('Email is required'),
   password: yup
     .string()
-    .min(8, "Password must be at least 8 characters")
-    .required("Password is required"),
+    .min(8, 'Password must be at least 8 characters')
+    .required('Password is required'),
 });
 
 export const RegistrationForm = () => {
@@ -22,21 +23,21 @@ export const RegistrationForm = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = data => console.log(data);
 
   return (
-    <div>
-      <Title title={"Registration"} />
+    <RegistrationContainer>
+      <Title title={'Registration'} />
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input {...register("name")} />
+        <input {...register('name')} />
         <p>{errors.name?.message}</p>
-        <input {...register("email")} />
+        <input {...register('email')} />
         <p>{errors.email?.message}</p>
-        <input {...register("password")} />
+        <input {...register('password')} />
         <p>{errors.password?.message}</p>
         <Button type="submit" buttonText="Sign Up" />
       </form>
       <Link linkText="Sign In" />
-    </div>
+    </RegistrationContainer>
   );
 };

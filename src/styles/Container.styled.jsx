@@ -17,9 +17,6 @@ export const Container = styled.div`
     url(${imageMob}) no-repeat right / contain,
     lightgray -3px -13.319px / 100.511% 101.679% no-repeat;
 
-  padding-left: 28px;
-  padding-right: 28px;
-
   @media screen and (min-width: 768px) {
     background: linear-gradient(
         0deg,
@@ -30,9 +27,6 @@ export const Container = styled.div`
       linear-gradient(85deg, #0a0a11 0%, rgba(10, 10, 17, 0) 100%),
       url(${imageTab}) no-repeat right / contain,
       lightgray -3px -13.319px / 100.511% 101.679% no-repeat;
-
-    padding-left: 64px;
-    padding-right: 234px;
   }
 
   @media screen and (min-width: 1440px) {
@@ -45,8 +39,5 @@ export const Container = styled.div`
       linear-gradient(85deg, #0a0a11 0%, rgba(10, 10, 17, 0) 100%),
       url(${imageDes}) no-repeat right / contain,
       lightgray -3px -13.319px / 100.511% 101.679% no-repeat;
-
-    padding-left: 100px;
-    padding-right: 855px;
   }
 `;
